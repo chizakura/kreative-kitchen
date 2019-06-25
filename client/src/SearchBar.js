@@ -8,7 +8,7 @@ class SearchBar extends Component {
             <div className="search-bar-container">
                 <form className="Search" onSubmit={this.props.handleSubmit}>
                     <img src={Search} alt = "Search"/>
-                    <input className="text-box" type="text" placeholder="Example: Green Pepper" value={this.props.searchItems} onChange={this.props.handleChange}/>
+                    <input className="text-box" type="text" placeholder="Example: Beef, Onion, Tomato" value={this.props.searchItems} onChange={this.props.handleChange}/>
                 </form>
             </div>
         )
