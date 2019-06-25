@@ -5,18 +5,12 @@ import Search from "./Search.png";
 class SearchBar extends Component {
     render() {
         return (
-            <div className = "search-bar-container">
-                <div className="Search">
+            <div className="search-bar-container">
+                <form className="Search" onSubmit={this.props.handleSubmit}>
                     <img src={Search} alt = "Search"/>
-                <input type="text" className="text-box" placeholder="Example: Green Pepper"/>
-
-                <div className = "ingredient-text">
-                <div className = "enter-an-ingredient"> Enter an ingredient. </div>
-                    <div className = "entering-more-will"> Entering more will narrow down your results.</div>
-                </div>
+                    <input type="text" placeholder="Example: green pepper" value={this.props.searchItems} onChange={this.props.handleChange}/>
+                </form>
             </div>
-            </div>
-
         )
     }
 }
