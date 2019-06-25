@@ -66,18 +66,17 @@ class App extends Component {
             <div className="entering-more-will">Entering more will narrow down your results.</div>
           </div>) : 
           (<div>
+            <IngredientTag/>
+            <div className="recipe-box-container">
             {this.state.recipeList.map((recipe, index) => {
               return (
-                <div>
-                <IngredientTag 
-                />
                 <Recipe
                   key = {index}
                   recipe = {recipe}
                 />
-                </div>
               )
             })}
+            </div>
           </div>)
         }
       </div>
