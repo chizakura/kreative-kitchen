@@ -5,6 +5,7 @@ import SearchBar from './SearchBar';
 import Recipe from './Recipe';
 import KreativeKitchen from './KreativeKitchen_Logo.png';
 import Hamburger_Menu from './Hamburger_Menu.png';
+import IngredientTag from './IngredientTag'
 
 class App extends Component {
   constructor(props) {
@@ -58,18 +59,23 @@ class App extends Component {
           handleSubmit = {this.handleSubmit}
           searchItems = {this.state.searchItems}
         />
+       
         {this.state.recipeList.length === 0 ? 
           (<div>
-            <h1>Enter an ingredient.</h1>
-            <p>Entering more will narrow down your results.</p>
+            <div className="enter-an-ingredient">Enter an ingredient.</div>
+            <div className="entering-more-will">Entering more will narrow down your results.</div>
           </div>) : 
           (<div>
             {this.state.recipeList.map((recipe, index) => {
               return (
+                <div>
+                <IngredientTag 
+                />
                 <Recipe
                   key = {index}
                   recipe = {recipe}
                 />
+                </div>
               )
             })}
           </div>)
