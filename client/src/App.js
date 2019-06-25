@@ -24,22 +24,25 @@ class App extends Component {
   handleChange(event) {
     const value = event.target.value;
     this.setState({
-      searchItems: value,
-      searchItemsArr: value.split(",")
+      searchItems: value
     })
   }
 
   async handleSubmit(event) {
     event.preventDefault();
+    const items = this.state.searchItems;
     const res = await axios(`https://api.edamam.com/search?q=${this.state.searchItems}&app_id=6c3aa117&app_key=0a7b9cbed799150826ba8a7d204a2382&time=1-60`);
     const list = res.data.hits.map(recipe => {
       return recipe.recipe
     })
     this.setState({
       recipeList: list,
+      searchItemsArr: items.split(","),
       searchItems: ""
     })
+    console.log(this.state.searchItemsArr)
   }
+
 
   render() {
     console.log(this.state.searchItems)
@@ -66,16 +69,14 @@ class App extends Component {
             <div className="entering-more-will">Entering more will narrow down your results.</div>
           </div>) : 
           (<div>
+            <IngredientTag searchItemsArr={this.state.searchItemsArr}
+                />
             {this.state.recipeList.map((recipe, index) => {
               return (
-                <div>
-                <IngredientTag 
-                />
                 <Recipe
                   key = {index}
                   recipe = {recipe}
                 />
-                </div>
               )
             })}
           </div>)
