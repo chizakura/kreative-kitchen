@@ -110,7 +110,7 @@ input::placeholder {
  font-size: 34px;
   width: 304px;
   height: 43px;
-  font-family: Marcellus;
+  font-family: 'Marcellus', serif;
   font-size: 34px;
   margin: 0 auto;
   text-align: center;
@@ -121,7 +121,7 @@ input::placeholder {
   font-size: 25px;
   width: 347px;
   height: 62px;
-  font-family: Marcellus;
+  font-family: 'Marcellus', serif;
   font-size: 25px;
   margin: 0 auto;
   text-align: center;
