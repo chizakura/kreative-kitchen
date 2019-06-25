@@ -23,7 +23,18 @@
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
   and (orientation: portrait) { 
-
+    .recipe-box {
+      display: flex;
+      align-items: flex-start;
+    }
+    .recipe-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .recipe-details p {
+      margin: 0;
+    }
 }
 
 /* Landscape */
