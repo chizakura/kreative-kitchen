@@ -1,41 +1,3 @@
-/* Portrait and Landscape */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3) {
-
-}
-
-/* Portrait */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: portrait) {
-
-}
-
-/* Landscape */
-@media only screen
-and (min-device-width: 414px)
-and (max-device-width: 736px)
-and (-webkit-min-device-pixel-ratio: 3)
-and (orientation: landscape) {
-
-}
-
-
-/* Demry */
-
-.App {
-  text-align: center;
-}
-
-.nav {
-  height: 70px;
-  margin-bottom: 107px;
-}
-
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
@@ -51,9 +13,7 @@ and (orientation: landscape) {
   and (min-device-width: 414px) 
   and (max-device-width: 736px) 
   and (-webkit-min-device-pixel-ratio: 3)
-  and (orientation: portrait) { 
-
-}
+  and (orientation: portrait) {}
 
 /* Landscape */
 @media only screen 
@@ -64,4 +24,156 @@ and (orientation: landscape) {
 
 }
 
-/* Kyan's Comment */
+.App {
+  text-align: center;
+}
+
+.nav {
+  height: 70px;
+  background-color: #ededed;
+  opacity: 0.49;
+  width: 375px;
+
+  display: flex;
+  margin-bottom: 20px;
+
+}
+
+.text-box {
+  outline: none;
+  border: 0;
+  width: 260px;
+  /*height: 2px;*/
+  border-bottom: solid 3px #505050;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+.Kreative-Kitchen_Logo {
+
+  align-self: center;
+  justify-content: center;
+
+}
+
+.Kreative-Kitchen_Logo img {
+  width: 60%;
+}
+
+.Hamburger_Menu {
+  width: 32px;
+  height: 16px;
+  align-self: left;
+  justify-content: left;
+}
+
+.Hamburger_Menu img {
+  width: 40px;
+  margin-left: 21px;
+  margin-top: 18px;
+}
+
+.search-bar-container {
+  display: flex;
+}
+
+.Search{
+  width: 375px;
+}
+
+.Search img {
+  width: 43px;
+  height: 43px;
+  margin-left: 23px;
+  margin-top: 25px;
+}
+
+
+input::placeholder {
+  width: 209px;
+  height: 20px;
+  font-family: Avenir;
+  font-size: 17px;
+  font-weight: 500;
+  /*font-style: normal;*/
+  /*font-stretch: normal;*/
+  /*line-height: normal;*/
+  /*letter-spacing: normal;*/
+  text-align: center;
+  margin-bottom: 0px;
+  color: #d5d5d5;
+}
+
+.enter-an-ingredient {
+ font-size: 34px;
+  width: 304px;
+  height: 43px;
+  font-family: Marcellus;
+  font-size: 34px;
+  margin: 0 auto;
+  text-align: center;
+  color: #505050;
+}
+
+.entering-more-will {
+  font-size: 25px;
+  width: 347px;
+  height: 62px;
+  font-family: Marcellus;
+  font-size: 25px;
+  margin: 0 auto;
+  text-align: center;
+  color: #505050;
+}
+
+.ingredient-text {
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+  margin: 0 auto;
+}
+
+/*Font 1 font-family: 'Marcellus', serif;*/
+/*Font 2 @font-face {
+    font-family: 'Avenir LT Std 65 Medium';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir LT Std 65 Medium'), url('AvenirLTStd-Medium.woff') format('woff');*/
+
+/* Linda */
+.recipe-box {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 18px;
+  padding-left: 17px; 
+}
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.recipe-details p {
+  margin: 0;
+}
+.recipe-title {
+  width: 234px;
+  height: 50px;
+  font-family: 'Marcellus', serif;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  color: #3e3e3e;
+  padding-left: 10px;
+  padding-right: 19px;
+}
+.recipe-time {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
