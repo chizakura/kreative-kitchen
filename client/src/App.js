@@ -3,6 +3,8 @@ import './App.css';
 import axios from 'axios';
 import SearchBar from './SearchBar';
 import Recipe from './Recipe';
+import KreativeKitchen from './KreativeKitchen_Logo.png';
+import Hamburger_Menu from './Hamburger_Menu.png';
 
 class App extends Component {
   constructor(props) {
@@ -43,7 +45,14 @@ class App extends Component {
     console.log(this.state.recipeList)
     return (
       <div className="App">
-        <div className="nav">This is div</div>
+        <div className="nav">
+          <div className="Hamburger_Menu">
+              <img src={Hamburger_Menu} alt = "Hamburger_Menu"/>
+          </div>
+          <div className="Kreative-Kitchen_Logo">
+            <img src={KreativeKitchen} alt="Kreative-Kitchen_Logo"/>
+          </div>
+        </div>
         <SearchBar
           handleChange = {this.handleChange}
           handleSubmit = {this.handleSubmit}
