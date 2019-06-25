@@ -6,8 +6,8 @@ class Recipe extends Component {
             <div className="recipe-box">
                 <img height="95px" src={this.props.recipe.image} alt={this.props.recipe.label}/>
                 <div className="recipe-details">
-                    <p>{this.props.recipe.label}</p>
-                    <p>{`${this.props.recipe.totalTime} minutes`}</p>
+                    <p className="recipe-title">{this.props.recipe.label}</p>
+                    <p className="recipe-time">{`${this.props.recipe.totalTime} minutes`}</p>
                 </div>
             </div>
         )
