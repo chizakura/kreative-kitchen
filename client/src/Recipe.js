@@ -8,6 +8,7 @@ class Recipe extends Component {
                 <div className="recipe-details">
                     <p className="recipe-title">{this.props.recipe.label}</p>
                     <p className="recipe-time">{`${this.props.recipe.totalTime} minutes`}</p>
+                    <p className="recipe-summary">Summary of recipe</p>
                 </div>
             </div>
         )

@@ -69,8 +69,9 @@ class App extends Component {
             <div className="entering-more-will">Entering more will narrow down your results.</div>
           </div>) : 
           (<div>
-            <IngredientTag searchItemsArr={this.state.searchItemsArr}
-                />
+            <IngredientTag
+              searchItemsArr={this.state.searchItemsArr}
+            />
             {this.state.recipeList.map((recipe, index) => {
               return (
                 <Recipe
@@ -79,6 +80,7 @@ class App extends Component {
                 />
               )
             })}
+            </div>
           </div>)
         }
       </div>
