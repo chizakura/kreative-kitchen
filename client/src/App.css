@@ -48,9 +48,9 @@
   margin-top: 18px;
 }
 
-/* .menu-items {
-  visibility: hidden;
-} */
+.menu-items {
+  display: none;
+}
 
 .search-bar-container {
   display: flex;
@@ -256,22 +256,23 @@ button.ingredienttag-x {
   top: -5px;
 }
 
-@media only screen and (min-width: 376px) {
+@media only screen and (min-width: 550px) {
   .nav {
     height: 70px;
     background-color: #ededed;
     opacity: 0.49;
   
     display: flex;
+    justify-content: space-around;
     margin-bottom: 20px;
   }
 
   .Hamburger_Menu {
-    visibility: hidden;
+    display: none;
   }
 
   .Kreative-Kitchen_Logo {
-    margin: 0 auto;
+    margin: 0;
   }
   
   .Kreative-Kitchen_Logo img {
@@ -281,6 +282,41 @@ button.ingredienttag-x {
 
   .menu-items {
     display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .menu-items a {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .before-search-container {
+    display: flex;
     flex-direction: column;
+  }
+
+  .search-bar-container {
+    order: 3;
+  }
+
+  .Search input {
+    font-size: 24px;
+    width: 930px;
+  }
+
+  .enter-an-ingredient {
+    order: 1;
+    width: 447px;
+  }
+
+  .entering-more-will {
+    order: 2;
+    width: 716px;
+  }
+
+  .after-search-container {
+    order: 4;
   }
 }

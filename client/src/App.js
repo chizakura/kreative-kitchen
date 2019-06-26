@@ -53,30 +53,30 @@ class App extends Component {
           <div className="Hamburger_Menu">
               <img src={Hamburger_Menu} alt = "Hamburger_Menu"/>
           </div>
-          {/* <div className="menu-items">
+          <div className="menu-items">
             <a href="ingredients">MY INGREDIENTS</a>
             <a href="recipes">RECIPES</a>
-          </div> */}
+          </div>
           <div className="Kreative-Kitchen_Logo">
             <img src={KreativeKitchen} alt="Kreative-Kitchen_Logo"/>
           </div>
-          {/* <div className="menu-items">
+          <div className="menu-items">
             <a href="account">ACCOUNT</a>
             <a href="search">SEARCH</a>
-          </div> */}
+          </div>
         </div>
+       <div className="before-search-container">
         <SearchBar
-          handleChange = {this.handleChange}
-          handleSubmit = {this.handleSubmit}
-          searchItems = {this.state.searchItems}
+            handleChange = {this.handleChange}
+            handleSubmit = {this.handleSubmit}
+            searchItems = {this.state.searchItems}
         />
-       <div>
         {this.state.recipeList.length === 0 ? 
           (<div>
             <div className="enter-an-ingredient">Enter an ingredient.</div>
             <div className="entering-more-will">Entering more will narrow down your results.</div>
           </div>) : 
-          (<div>
+          (<div className="after-search-container">
             <IngredientTag
               searchItemsArr={this.state.searchItemsArr}
             />
