@@ -16,7 +16,7 @@ class IngredientTag extends Component {
             <p className="ingredienttag-ingredienttag" key={index}>
               {item}
               <span className="ingredienttag-x">
-                <button value={item} onClick={removeIngredientTag}>X</button>
+                <button className="ingredienttag-x" value={item} onClick={removeIngredientTag}>&times;</button>
               </span>
             </p>
           )}
@@ -24,7 +24,6 @@ class IngredientTag extends Component {
             
         )
     }
-  
 }
 
 export default IngredientTag;

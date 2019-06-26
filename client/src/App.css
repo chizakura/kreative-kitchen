@@ -21,8 +21,8 @@
   border-bottom: solid 3px #505050;
   margin-left: 10px;
   margin-bottom: 20px;
-  margin-top: 20px;
   margin-right: 33px;
+
 }
 
 .Kreative-Kitchen_Logo {
@@ -60,11 +60,24 @@
   width: 100%;
 }
 
+form {
+  margin-bottom: -15px;
+}
+
 .Search img {
   width: 43px;
   height: 43px;
   margin-left: 23px;
   margin-top: 25px;
+}
+
+input {
+  font-size: 17px;
+  position: relative;
+  bottom: 20px;
+  color: #505050;
+  border: 1px solid green;
+
 }
 
 input::placeholder {
@@ -91,7 +104,8 @@ input::placeholder {
   margin: 0 auto;
   text-align: center;
   color: #505050;
-  margin-top: 60px;
+  margin-top: 45px;
+  
 }
 
 .entering-more-will {
@@ -184,6 +198,13 @@ input::placeholder {
   color: #505050;
 }
 
+div.ingredient-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 23px;
+  justify-content: left;
+}
+
 a {
   text-decoration: none;
 }
@@ -206,6 +227,33 @@ a {
   font-weight:900;
   color: white;
   font-size: 25px;
+}
+
+div.ingredienttag-ingredienttag {
+  padding-top: 5px;
+  padding-bottom: -5px;
+}
+
+div.ingredienttag-ingredienttag {
+  /* width: 201px; */
+  margin: 5px 5px;
+  padding: 0 25px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ff7894;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+button.ingredienttag-x {
+  font-weight:400;
+  color: white;
+  font-size: 35px;
+  position: relative;
+  right:-25px;
+  top: -5px;
 }
 
 @media only screen and (min-width: 376px) {
