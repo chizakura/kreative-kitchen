@@ -53,16 +53,24 @@ class App extends Component {
           <div className="Hamburger_Menu">
               <img src={Hamburger_Menu} alt = "Hamburger_Menu"/>
           </div>
+          {/* <div className="menu-items">
+            <a href="ingredients">MY INGREDIENTS</a>
+            <a href="recipes">RECIPES</a>
+          </div> */}
           <div className="Kreative-Kitchen_Logo">
             <img src={KreativeKitchen} alt="Kreative-Kitchen_Logo"/>
           </div>
+          {/* <div className="menu-items">
+            <a href="account">ACCOUNT</a>
+            <a href="search">SEARCH</a>
+          </div> */}
         </div>
         <SearchBar
           handleChange = {this.handleChange}
           handleSubmit = {this.handleSubmit}
           searchItems = {this.state.searchItems}
         />
-       
+       <div>
         {this.state.recipeList.length === 0 ? 
           (<div>
             <div className="enter-an-ingredient">Enter an ingredient.</div>
@@ -72,17 +80,20 @@ class App extends Component {
             <IngredientTag
               searchItemsArr={this.state.searchItemsArr}
             />
-            {this.state.recipeList.map((recipe, index) => {
-              return (
-                <Recipe
-                  key = {index}
-                  recipe = {recipe}
-                />
-              )
-            })}
+            <div className="recipe-box-container">
+              {this.state.recipeList.map((recipe, index) => {
+                return (
+                  <Recipe
+                    key = {index}
+                    recipe = {recipe}
+                  />
+                )
+              })}
             </div>
-          </div>)
+            </div>
+          )
         }
+      </div>
       </div>
     )
   }
