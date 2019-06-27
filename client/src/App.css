@@ -248,8 +248,8 @@ div.ingredienttag-ingredienttag {
 
 div.ingredienttag-ingredienttag {
   /* width: 201px; */
-  margin: 5px 5px;
-  padding: 0 25px;
+
+  width: 201px;
   height: 40px;
   border-radius: 20px;
   background-color: #ff7894;
@@ -257,6 +257,9 @@ div.ingredienttag-ingredienttag {
   font-size: 17px;
   font-weight: 500;
   text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 button.ingredienttag-x {
@@ -266,6 +269,8 @@ button.ingredienttag-x {
   position: relative;
   right:-25px;
   top: -5px;
+  background: rgba(0,0,0,0);
+  border: 0;
 }
 
 @media only screen and (min-width: 1045px) {
