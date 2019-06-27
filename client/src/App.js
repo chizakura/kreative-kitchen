@@ -80,6 +80,7 @@ class App extends Component {
             <IngredientTag
               searchItemsArr={this.state.searchItemsArr}
             />
+            <div className="number-results">{`${this.state.recipeList.length} results`}</div>
             <div className="recipe-box-container">
               {this.state.recipeList.map((recipe, index) => {
                 return (
