@@ -330,10 +330,13 @@ button.ingredienttag-x {
   }
 
   .after-search-container {
-    order: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .recipe-box-container {
+    order: 5;
     background-color: white;
     display: grid;
     grid-template-columns: repeat(4, 300px);
@@ -349,5 +352,9 @@ button.ingredienttag-x {
 
   .recipe-box img {
     height: 247px;
+  }
+
+  .ingredient-tag-container {
+    order: 4;
   }
 }
