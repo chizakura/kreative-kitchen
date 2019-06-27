@@ -146,6 +146,10 @@ input::placeholder {
   padding-left: 17px;
 }
 
+.recipe-box img {
+  height: 95px;
+}
+
 .recipe-details {
   display: flex;
   flex-direction: column;
@@ -327,5 +331,23 @@ button.ingredienttag-x {
 
   .after-search-container {
     order: 4;
+  }
+
+  .recipe-box-container {
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+  }
+
+  .recipe-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-top: 18px;
+    padding-left: 17px; */
+  }
+
+  .recipe-box img {
+    height: 247px;
   }
 }
