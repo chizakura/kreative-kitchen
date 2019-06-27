@@ -19,6 +19,27 @@ class App extends Component {
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.deleteIngredientTag = this.deleteIngredientTag.bind(this);
+    this.fetchData = this.fetchData.bind(this);
+  }
+
+  deleteIngredientTag(index){
+    let dup = [...this.state.searchItemsArr];
+    dup.splice(index, 1);
+
+    if(dup.length <= 0){
+      this.setState({
+        recipeList: []
+      })
+      return;
+    }
+
+    this.setState({
+      searchItemsArr: dup,
+      searchItems: dup.join(",")
+    },this.fetchData)
+
+
   }
 
   handleChange(event) {
@@ -30,6 +51,10 @@ class App extends Component {
 
   async handleSubmit(event) {
     event.preventDefault();
+    this.fetchData();
+  }
+
+  async fetchData(){
     const items = this.state.searchItems;
     const res = await axios(`https://api.edamam.com/search?q=${this.state.searchItems}&app_id=6c3aa117&app_key=0a7b9cbed799150826ba8a7d204a2382&time=1-60`);
     const list = res.data.hits.map(recipe => {
@@ -37,11 +62,17 @@ class App extends Component {
     })
     this.setState({
       recipeList: list,
-      searchItemsArr: items.split(","),
-      searchItems: ""
-    })
+
+    });
+    if(this.state.searchItems.length > 0){
+      this.setState({
+        searchItemsArr: items.split(","),
+        searchItems: ""
+      })
+    }
     console.log(this.state.searchItemsArr)
   }
+
 
 
   render() {
@@ -79,6 +110,7 @@ class App extends Component {
           (<div className="after-search-container">
             <IngredientTag
               searchItemsArr={this.state.searchItemsArr}
+              deleteIngredientTag = {this.deleteIngredientTag}
             />
             <div className="number-results">{`${this.state.recipeList.length} results`}</div>
             <div className="recipe-box-container">
