@@ -207,6 +207,14 @@ div.ingredient-tag-container {
 
 a {
   text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.56;
+  letter-spacing: 0.53px;
+  color: #3e3e3e;
 }
 
 .ingredienttag-ingredienttag {
@@ -256,7 +264,7 @@ button.ingredienttag-x {
   top: -5px;
 }
 
-@media only screen and (min-width: 550px) {
+@media only screen and (min-width: 1045px) {
   .nav {
     height: 70px;
     background-color: #ededed;
@@ -264,7 +272,7 @@ button.ingredienttag-x {
   
     display: flex;
     justify-content: space-around;
-    margin-bottom: 20px;
+    margin-bottom: 125px;
   }
 
   .Hamburger_Menu {
@@ -299,6 +307,7 @@ button.ingredienttag-x {
 
   .search-bar-container {
     order: 3;
+    padding-top: 50px;
   }
 
   .Search input {
