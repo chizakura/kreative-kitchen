@@ -361,6 +361,7 @@ button.ingredienttag-x {
   .number-results {
     order: 5;
     align-self: flex-start;
+    padding-top: 50px;
     padding-left: 144px;
     height: 25px;
     font-family: 'Montserrat', sans-serif;
