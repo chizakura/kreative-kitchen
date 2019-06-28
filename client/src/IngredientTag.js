@@ -19,7 +19,7 @@ class IngredientTag extends Component {
         <div className="ingredient-tag-container">
           {this.props.searchItemsArr.map((item, index) => 
             <p className="ingredienttag-ingredienttag" key={index} id={index}>
-              {item}
+              <div className="text-text">{item}</div>
               <span className="ingredienttag-x">
                 <button className="ingredienttag-x" value={item} onClick={()=>{this.removeIngredientTag(index)}}>&times;</button>
               </span>
